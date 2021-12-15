@@ -27,7 +27,7 @@ public class Menu {
         System.out.println("------------------------------");
         System.out.println("  1 - Cadastrar Biblioteca    ");
         System.out.println("  2 - Listar Bibliotecas      ");
-        System.out.println("  1 - Acessar Biblioteca      ");
+        System.out.println("  3 - Acessar Biblioteca      ");
         System.out.println("------------------------------");
 
         switch (entrada.nextInt()){
@@ -113,10 +113,9 @@ public class Menu {
         GeneroView generoView = new GeneroView();
         System.out.println("------------------------------");
         System.out.println("  1 - Cadastrar Livro        ");
-        System.out.println("  2 - Mostrar Todos os livros           ");
+        System.out.println("  2 - Mostrar livros desta biblioteca           ");
         System.out.println("  3 - Encontrar livro pelo ID           ");
-        System.out.println("  4 - Mostrar livros desta biblioteca           ");
-        System.out.println("  5 - Mostrar livros pelo genero           ");
+        System.out.println("  4 - Mostrar livros pelo genero           ");
         System.out.println("  0 - Voltar                  ");
         System.out.println("------------------------------");
 
@@ -129,17 +128,13 @@ public class Menu {
                 this.menuLivro(biblioteca);
                 break;
             case 2:
-                livroView.cadastrarLivro(biblioteca);
+                livroView.listarLivrosBiblioteca(biblioteca);
                 this.menuLivro(biblioteca);
             case 3:
                 livroView.getLivroById(biblioteca);
                 this.menuLivro(biblioteca);
                 break;
             case 4:
-                livroView.listarLivrosBiblioteca(biblioteca);
-                this.menuLivro(biblioteca);
-                break;
-            case 5:
                 livroView.listarLivrosGenero(generoView.getGeneroById());
                 this.menuLivro(biblioteca);
                 break;
