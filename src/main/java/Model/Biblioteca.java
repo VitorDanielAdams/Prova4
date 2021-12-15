@@ -5,6 +5,7 @@ public class Biblioteca {
     private int id_biblioteca;
     private String nome_biblioteca;
 
+
     public Biblioteca() {
     }
 
@@ -24,10 +25,10 @@ public class Biblioteca {
         this.nome_biblioteca = nome_biblioteca;
     }
 
+
+
     @Override
     public String toString() {
-        return "Biblioteca: \n" +
-                "id_biblioteca= " + id_biblioteca +
-                "nome_biblioteca= " + nome_biblioteca;
+        return "Biblioteca: " + nome_biblioteca;
     }
 }
